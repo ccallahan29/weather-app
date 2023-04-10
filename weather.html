@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Parcel Sandbox</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <link rel="stylesheet" href="src/weather-styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a92d35149f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <form id="search-form">
+      <input type="search" placeholder="City search..." class="city-search" id="city-search-input" />
+      <input type="submit" value="Search" class="search-button" />
+      <button id="current-location" class="location-button">Current Location</button>
+    </form>
+    <br />
+    <div class="row">
+      <div class="col-6">
+        <h1 id="weather-city">
+          Stuttgart
+        </h1>
+        <h5 id="time">Current date and time unavailable
+        </h5>
+        <span id="today-temp">
+          5
+        </span>
+        <span id="temp-units">
+          <a href="#" id="celsius">°C</a>
+          /
+          <a href="#" id="fahrenheit">°F</a>
+        </span>
+      </div>
+      <div class="col-6">
+        <i class="fa-regular fa-snowflake snow-icons"></i>
+        <p>Percipitation: 40%</p>
+        <p>Wind: 15 mph</p>
+      </div>
+    </div>
+    <span class="warning">*Warning: Snow Showers/Icy Surfaces*</span>
+    <br />
+    <hr />
+    <div class="row">
+      <div class="col weekdays">
+        <div class="card">
+          <div class="card-body">
+            Monday
+            <i class="fa-solid fa-cloud-sun cloudy-icons"></i>
+            14°C/5°C
+          </div>
+        </div>
+      </div>
+      <div class="col weekdays">
+        <div class="card">
+          <div class="card-body">
+            Tuesday
+            <i class="fa-solid fa-cloud-sun cloudy-icons"></i>
+            16°C/9°C
+          </div>
+        </div>
+      </div>
+      <div class="col weekdays">
+        <div class="card">
+          <div class="card-body">
+            Wednesday
+            <i class="fa-regular fa-sun sunny-icons"></i>
+            13°C/7°C
+          </div>
+        </div>
+      </div>
+      <div class="col weekdays">
+        <div class="card">
+          <div class="card-body">
+            Thursday
+            <i class="fa-solid fa-cloud-sun cloudy-icons"></i>
+            10°C/6°C
+          </div>
+        </div>
+      </div>
+      <div class="col weekdays">
+        <div class="card">
+          <div class="card-body">
+            Friday
+            <i class="fa-solid fa-cloud-sun cloudy-icons"></i>
+            11°C/2°C
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/weather-script.js"></script>
+</body>
+
+</html>

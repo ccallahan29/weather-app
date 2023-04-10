@@ -1,0 +1,64 @@
+body {
+  background: rgb(180, 219, 226);
+  background-attachment: fixed;
+  font-family: "Comfortaa", cursive;
+  font-size: 16px;
+  font-weight: bolder;
+  text-align: center;
+}
+.card-body {
+  background-color: rgb(255 255 255 0.15);
+  box-shadow: 0 8px 32px 0 grey;
+  border-radius: 8px;
+  border: 1px;
+}
+
+.city-search {
+  color: #095ca0;
+  width: 50%;
+}
+.cloudy-icons,
+.snow-icons,
+.sunny-icons {
+  display: inline-block;
+  font-size: 75px;
+  margin: 0 auto;
+  padding: 10px;
+  width: 100%;
+}
+.cloudy-icons {
+  color: gray;
+}
+
+.location-button {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+.search-button:hover,
+.location-button:hover {
+  background-color: #095ca0;
+  border: 1px solid #63baec;
+  color: #63baec;
+  cursor: pointer;
+  transition: 0.3s ease-in all;
+}
+.search-button,
+.location-button {
+  background-color: #63baec;
+  border: 1px solid #095ca0;
+  border-radius: 6px;
+  color: #095ca0;
+  padding: 3px 16px;
+}
+.snow-icons {
+  color: white;
+}
+.sunny-icons {
+  color: rgb(243, 200, 46);
+}
+.warning {
+  color: red;
+  display: block;
+  margin: 0 auto;
+}
