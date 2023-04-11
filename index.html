@@ -24,79 +24,75 @@
       <button id="current-location" class="location-button">Current Location</button>
     </form>
     <br />
-    <div class="row">
-      <div class="col-6">
-        <h1 id="weather-city">
-          Stuttgart
-        </h1>
-        <h5 id="time">Current date and time unavailable
-        </h5>
-        <span id="today-temp">
-          5
-        </span>
-        <span id="temp-units">
-          <a href="#" id="celsius">°C</a>
-          /
-          <a href="#" id="fahrenheit">°F</a>
-        </span>
-      </div>
-      <div class="col-6">
-        <i class="fa-regular fa-snowflake snow-icons"></i>
-        <p>Percipitation: 40%</p>
-        <p>Wind: 15 mph</p>
-      </div>
+    <div>
+      <h1 id="weather-city">
+        Stuttgart
+      </h1>
+      <h5 id="time">Current date and time unavailable
+      </h5>
+      <span id="today-temp">
+
+      </span>
+      <span id="temp-units">
+        <a href="#" id="celsius">°C</a>
+        /
+        <a href="#" id="fahrenheit">°F</a>
+      </span>
+      <p>Humidity: <span id="humidity"></span>%</p>
+      <p>Wind: <span id="wind-speed"></span> mph</p>
     </div>
-    <span class="warning">*Warning: Snow Showers/Icy Surfaces*</span>
-    <br />
-    <hr />
-    <div class="row">
-      <div class="col weekdays">
-        <div class="card">
-          <div class="card-body">
-            Monday
-            <i class="fa-solid fa-cloud-sun cloudy-icons"></i>
-            14°C/5°C
-          </div>
-        </div>
-      </div>
-      <div class="col weekdays">
-        <div class="card">
-          <div class="card-body">
-            Tuesday
-            <i class="fa-solid fa-cloud-sun cloudy-icons"></i>
-            16°C/9°C
-          </div>
-        </div>
-      </div>
-      <div class="col weekdays">
-        <div class="card">
-          <div class="card-body">
-            Wednesday
-            <i class="fa-regular fa-sun sunny-icons"></i>
-            13°C/7°C
-          </div>
-        </div>
-      </div>
-      <div class="col weekdays">
-        <div class="card">
-          <div class="card-body">
-            Thursday
-            <i class="fa-solid fa-cloud-sun cloudy-icons"></i>
-            10°C/6°C
-          </div>
-        </div>
-      </div>
-      <div class="col weekdays">
-        <div class="card">
-          <div class="card-body">
-            Friday
-            <i class="fa-solid fa-cloud-sun cloudy-icons"></i>
-            11°C/2°C
-          </div>
+  </div>
+  <p>Today's weather: <span id="weather-description"></span></p>
+  <br />
+  <hr />
+  <div class="row">
+    <div class="col weekdays">
+      <div class="card">
+        <div class="card-body">
+          Monday
+          <i class="fa-solid fa-cloud-sun cloudy-icons"></i>
+          14°C/5°C
         </div>
       </div>
     </div>
-    <script src="src/weather-script.js"></script>
+    <div class="col weekdays">
+      <div class="card">
+        <div class="card-body">
+          Tuesday
+          <i class="fa-solid fa-cloud-sun cloudy-icons"></i>
+          16°C/9°C
+        </div>
+      </div>
+    </div>
+    <div class="col weekdays">
+      <div class="card">
+        <div class="card-body">
+          Wednesday
+          <i class="fa-regular fa-sun sunny-icons"></i>
+          13°C/7°C
+        </div>
+      </div>
+    </div>
+    <div class="col weekdays">
+      <div class="card">
+        <div class="card-body">
+          Thursday
+          <i class="fa-solid fa-cloud-sun cloudy-icons"></i>
+          10°C/6°C
+        </div>
+      </div>
+    </div>
+    <div class="col weekdays">
+      <div class="card">
+        <div class="card-body">
+          Friday
+          <i class="fa-solid fa-cloud-sun cloudy-icons"></i>
+          11°C/2°C
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="src/weather-script.js"></script>
 </body>
 
 </html>

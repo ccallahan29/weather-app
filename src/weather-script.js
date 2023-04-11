@@ -23,26 +23,51 @@ let time = document.querySelector("#time");
 time.innerHTML = `${currentDay}, ${currentHour}:${currentMinutes}`;
 
 function showTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
-  let searchTemperature = document.querySelector("#today-temp");
-  searchTemperature.innerHTML = temperature;
-  let newCity = document.querySelector("#weather-city");
-  newCity.innerHTML = response.data.name;
+  document.querySelector("#weather-city").innerHTML = response.data.name;
+  document.querySelector("#today-temp").innerHTML = Math.round(
+    response.data.main.temp
+  );
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind-speed").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector("#weather-description").innerHTML =
+    response.data.weather[0].main;
 }
 
-function search(event) {
+function showLocation(position) {
+  let apiKey = "9cb72bec958f8fb02391985ed7b219d2";
+  let lat = position.coords.latitude;
+  let long = position.coords.longitude;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
+}
+
+function findMyLocation(event) {
   event.preventDefault();
-  let citySearch = document.querySelector("#city-search-input");
-  let city = citySearch.value;
-  let apiKey = "7059cb165caa3316bff682d263a01b1e";
+  navigator.geolocation.getCurrentPosition(showLocation);
+}
+
+function searchCity(city) {
+  let apiKey = "9cb72bec958f8fb02391985ed7b219d2";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemperature);
 }
 
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", search);
+function submitCity(event) {
+  event.preventDefault();
+  let city = document.querySelector("#city-search-input").value;
+  searchCity(city);
+}
 
-/*function convertCelsiusTemp(event) {
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", submitCity);
+
+let findMe = document.querySelector("#current-location");
+findMe.addEventListener("click", findMyLocation);
+
+/*Might need this in order to convert Celsius and Fahrenheit later
+function convertCelsiusTemp(event) {
   event.preventDefault();
   let celsiusTemp = document.querySelector("#today-temp");
   celsiusTemp.innerHTML = "5";
